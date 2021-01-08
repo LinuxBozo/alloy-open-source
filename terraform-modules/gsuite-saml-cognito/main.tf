@@ -44,7 +44,7 @@ resource "aws_cognito_user_pool_client" "gsuite_saml" {
 }
 
 module "auth_domain_certificate" {
-  source = "git::https://github.com/alloy-commons/alloy-open-source//terraform-modules/acm?ref=be02d7725895d80ad7a41c37922d25c666dc649d"
+  source = "git::https://github.com/LinuxBozo/alloy-open-source//terraform-modules/acm?ref=be02d7725895d80ad7a41c37922d25c666dc649d"
 
   domain_names = [var.dns_name]
   zone_id      = var.zone_id
